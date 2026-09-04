@@ -369,3 +369,80 @@ body{
   .about-copy h2{font-size:38px}
   .about-copy p{font-size:17px}
 }
+
+/* v6 Wool & Hide homepage hero refinement */
+.hero{
+  min-height:auto !important;
+  padding:82px 20px 34px !important;
+  align-items:flex-start !important;
+}
+.hero-inner{
+  width:min(980px,100%) !important;
+}
+.hero-logo{
+  width:min(620px,82%) !important;
+  margin:0 auto 34px !important;
+  filter:drop-shadow(0 18px 38px rgba(0,0,0,.45));
+}
+.hero-statement{
+  max-width:800px;
+  margin:0 auto;
+  text-align:center;
+  padding:8px 20px 10px;
+}
+.hero-statement .eyebrow{
+  margin-bottom:16px;
+}
+.hero-statement h1{
+  margin:0 auto 22px;
+  color:var(--cream);
+  font-size:52px;
+  line-height:1.08;
+  font-weight:600;
+}
+.hero-statement p{
+  max-width:760px;
+  margin:0 auto;
+  color:#c9baa6;
+  font-size:18px;
+  line-height:1.8;
+}
+.hero-signoff{
+  margin-top:22px;
+  color:var(--gold2);
+  font-size:21px;
+  font-style:italic;
+  letter-spacing:.02em;
+}
+#collections{
+  padding-top:44px !important;
+}
+
+@media(max-width:800px){
+  .hero{
+    padding:68px 16px 22px !important;
+  }
+  .hero-logo{
+    width:min(520px,88%) !important;
+    margin-bottom:24px !important;
+  }
+  .hero-statement{
+    padding:4px 8px 4px;
+  }
+  .hero-statement h1{
+    font-size:36px;
+    line-height:1.12;
+    margin-bottom:18px;
+  }
+  .hero-statement p{
+    font-size:16px;
+    line-height:1.7;
+  }
+  .hero-signoff{
+    font-size:18px;
+    margin-top:18px;
+  }
+  #collections{
+    padding-top:32px !important;
+  }
+}
