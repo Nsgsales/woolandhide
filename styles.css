@@ -1,0 +1,308 @@
+
+:root{
+  --black:#080706;
+  --black2:#0e0a08;
+  --espresso:#1b110c;
+  --gold:#b37a36;
+  --gold2:#d3a967;
+  --cream:#efe3d2;
+  --muted:#b6a590;
+  --line:rgba(179,122,54,.35);
+  --panel:rgba(19,13,9,.94);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--cream);font-family:Georgia,"Times New Roman",serif;
+  background:
+    linear-gradient(rgba(10,7,5,.18),rgba(7,5,4,.30)),
+    url("assets/leather-bg-uniform.jpg") center top / cover fixed no-repeat;
+  min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.shell{width:min(1220px,calc(100% - 40px));margin:auto}
+
+/* NAV */
+.topbar{
+  position:absolute;top:0;left:0;right:0;z-index:50;
+  background:transparent;border-bottom:0;backdrop-filter:none
+}
+.nav{height:72px;display:flex;align-items:center;justify-content:flex-end}
+.brand-mini{display:none}
+.nav-right{display:flex;align-items:center;gap:30px}
+.navlink,.dropbtn{
+  background:none;border:0;color:var(--gold2);font:inherit;cursor:pointer;
+  text-transform:uppercase;letter-spacing:.14em;font-size:12px;padding:24px 0;
+  text-shadow:0 1px 12px rgba(0,0,0,.5)
+}
+.navlink:hover,.dropbtn:hover{color:#e7c58b}
+.dropdown{position:relative}
+.dropdown-menu{
+  position:absolute;right:0;top:58px;min-width:240px;background:#1a100b;
+  border:1px solid rgba(179,122,54,.48);box-shadow:0 20px 55px rgba(0,0,0,.55);
+  opacity:0;visibility:hidden;transform:translateY(-8px);transition:.18s ease
+}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{
+  opacity:1;visibility:visible;transform:translateY(0)
+}
+.dropdown-menu a{
+  display:block;padding:16px 18px;border-bottom:1px solid rgba(179,122,54,.15);
+  font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold2)
+}
+.dropdown-menu a:hover{background:#24160e;color:#f0cf95}
+
+/* HERO */
+.hero{
+  min-height:76vh;display:flex;align-items:center;justify-content:center;
+  padding:92px 20px 52px;text-align:center
+}
+.hero-inner{width:min(1020px,100%)}
+.hero-logo{width:min(960px,98%);margin:0 auto;filter:drop-shadow(0 24px 48px rgba(0,0,0,.5))}
+.hero-kicker{margin-top:24px;color:var(--gold2);letter-spacing:.38em;text-transform:uppercase;font-size:12px}
+.hero-copy{max-width:760px;margin:17px auto 0;color:#cbbba7;line-height:1.78;font-size:18px}
+.btn{
+  display:inline-block;margin-top:28px;padding:14px 24px;border:1px solid var(--gold);
+  color:var(--gold2);text-transform:uppercase;letter-spacing:.14em;font-size:12px
+}
+.btn:hover{background:var(--gold);color:#100b08}
+
+/* SECTIONS */
+.section{padding:76px 0}
+.section.alt{background:transparent;border:0}
+.section-head{text-align:center;margin-bottom:38px}
+.eyebrow{color:var(--gold2);font-size:11px;letter-spacing:.35em;text-transform:uppercase}
+h1,h2,h3{font-weight:600}
+.section h2{font-size:44px;margin:10px 0 12px}
+.section-head p{max-width:740px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.7}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.about-copy h2{font-size:44px;margin:8px 0 16px}
+.about-copy p{color:#c6b6a2;line-height:1.8;font-size:17px}
+.about-panel{
+  min-height:380px;border:1px solid var(--line);padding:28px;display:flex;align-items:flex-end;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.65)),
+    url('assets/products/challah/3.jpg') center/cover no-repeat;
+  box-shadow:inset 0 0 0 8px rgba(0,0,0,.12)
+}
+.about-quote{
+  background:rgba(10,7,5,.83);border:1px solid var(--line);padding:24px;
+  color:var(--cream);font-size:22px;line-height:1.5
+}
+
+/* COLLECTIONS */
+.collections{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.collection-card{
+  border:1px solid var(--line);background:linear-gradient(180deg,rgba(20,13,9,.92),rgba(13,9,7,.94));
+  overflow:hidden;transition:.2s ease
+}
+.collection-card:hover{transform:translateY(-5px);border-color:rgba(211,169,103,.72)}
+.collection-card img{width:100%;height:355px;object-fit:cover}
+.collection-body{padding:23px}
+.collection-body h3{font-size:28px;margin:0 0 8px;color:var(--gold2)}
+.collection-body p{margin:0 0 18px;color:#c2b19c;line-height:1.6}
+.collection-link{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)}
+
+/* PAGE HERO */
+.page-hero{text-align:center;padding:64px 0 38px;border-bottom:1px solid var(--line)}
+.page-hero .logo-small{width:min(520px,88%);margin:0 auto 26px}
+.page-hero h1{font-size:48px;margin:0 0 10px}
+.page-hero p{max-width:760px;margin:auto;color:var(--muted);line-height:1.7}
+
+/* PRODUCTS */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:50px 0 82px}
+.product{
+  cursor:pointer;background:rgba(18,12,9,.93);border:1px solid var(--line);overflow:hidden;transition:.2s ease
+}
+.product:hover{transform:translateY(-4px);border-color:rgba(211,169,103,.72)}
+.product img{width:100%;height:330px;object-fit:cover}
+.product-copy{padding:18px 18px 21px}
+.num{font-size:11px;color:var(--gold2);letter-spacing:.2em;text-transform:uppercase}
+.product h3{font-size:23px;margin:7px 0 6px}
+.product p{color:var(--muted);line-height:1.55;margin:0;font-size:15px}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;padding:25px;z-index:80}
+.modal.open{display:flex}
+.modal-card{max-width:980px;width:100%;display:grid;grid-template-columns:1.15fr .85fr;background:#0f0a08;border:1px solid rgba(211,169,103,.55);box-shadow:0 25px 80px #000}
+.modal-card img{width:100%;height:620px;object-fit:cover}
+.modal-info{padding:42px;position:relative}
+.close{position:absolute;top:18px;right:18px;background:none;border:0;color:var(--cream);font-size:30px;cursor:pointer}
+.modal-info h2{font-size:38px;margin:36px 0 12px}
+.modal-info p{color:#c9baa7;line-height:1.75}
+.detail-rule{width:70px;border-top:1px solid var(--gold);margin:24px 0}
+.detail-list{color:var(--muted);line-height:1.9}
+
+footer{border-top:1px solid var(--line);padding:34px 0 42px;text-align:center;color:#987b59;letter-spacing:.16em;text-transform:uppercase;font-size:11px}
+
+@media(max-width:860px){
+  .shell{width:min(100% - 24px,1220px)}
+  .nav{height:58px}.brand-mini{font-size:14px}.nav-right{gap:17px}.navlink,.dropbtn{font-size:10px}
+  .hero{min-height:62vh;padding-top:46px}.hero-copy{font-size:16px}
+  .about-grid,.collections,.grid{grid-template-columns:1fr}
+  .collection-card img,.product img{height:auto;max-height:440px}
+  .section h2,.about-copy h2{font-size:34px}.page-hero h1{font-size:38px}
+  .modal-card{grid-template-columns:1fr;max-height:90vh;overflow:auto}.modal-card img{height:auto}
+}
+
+/* Gartel multi-view product gallery */
+.modal-media{background:#0b0806;display:flex;flex-direction:column;min-width:0}
+.modal-main-wrap{display:flex;align-items:center;justify-content:center;min-height:500px;background:#0a0705}
+.modal-card .modal-image{width:100%;height:560px;object-fit:contain;background:#0a0705}
+.modal-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px;background:#0a0705;border-top:1px solid var(--line)}
+.modal-thumb{border:1px solid rgba(179,122,54,.25);background:#110b08;padding:0;cursor:pointer;overflow:hidden}
+.modal-thumb.active{border-color:var(--gold2)}
+.modal-thumb img{width:100%;height:92px;object-fit:cover}
+.view-label{display:block;padding:7px 5px;color:var(--muted);font-family:Georgia,"Times New Roman",serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.product-view-note{margin-top:10px;color:#9d876d;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:860px){
+ .modal-main-wrap{min-height:0}
+ .modal-card .modal-image{height:auto;max-height:55vh}
+ .modal-thumb img{height:70px}
+}
+
+/* Continuous homepage flow */
+.hero + .section,
+.section + .section{
+  border-top:0 !important;
+}
+#about,
+#collections{
+  box-shadow:none !important;
+}
+
+/* Single continuous hide surface */
+.hero,.section,#about,#collections,.page-hero,main,footer{background:transparent}
+
+/* Uniform continuous leather surface across all sections */
+.hero,.section,.section.alt,#about,#collections,.page-hero,main,footer{
+  background:transparent !important;
+  border-top:0 !important;
+  border-bottom:0 !important;
+  box-shadow:none !important;
+}
+
+
+/* Added for 4 home collection cards including Lulav & Esrog Sets */
+@media(min-width:861px) and (max-width:1200px){
+  .collections{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:1201px){
+  .collections{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Homepage hierarchy: collections first and more prominent */
+#collections{
+  padding-top:42px;
+  padding-bottom:84px;
+}
+#collections .section-head{
+  margin-bottom:30px;
+}
+#collections .section-head h2{
+  font-size:50px;
+}
+#collections .collection-card{
+  box-shadow:0 18px 45px rgba(0,0,0,.24);
+}
+#about{
+  padding-top:68px;
+}
+
+/* Five collection cards on larger screens */
+@media(min-width:1201px){
+  .collections{grid-template-columns:repeat(5,1fr);gap:18px}
+  .collection-card img{height:285px}
+  .collection-body{padding:19px}
+  .collection-body h3{font-size:24px}
+  .collection-body p{font-size:14px}
+}
+
+/* Homepage: let the products take over immediately after the logo */
+body.homepage .hero{min-height:auto}
+
+/* v21 homepage hierarchy */
+.hero{
+  min-height:auto;
+  padding:88px 20px 28px;
+}
+#collections{
+  padding-top:18px !important;
+  padding-bottom:74px;
+}
+#collections .collections{
+  margin-top:0;
+}
+@media(min-width:1201px){
+  #collections .collections{
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+  }
+  #collections .collection-card img{
+    height:285px;
+  }
+  #collections .collection-body{
+    padding:19px;
+  }
+  #collections .collection-body h3{
+    font-size:23px;
+  }
+}
+@media(min-width:861px) and (max-width:1200px){
+  #collections .collections{grid-template-columns:repeat(3,1fr)}
+}
+
+
+/* v22 small collections heading */
+.collections-head{
+  margin-bottom:18px;
+  text-align:center;
+}
+.collections-head .eyebrow{
+  font-size:18px;
+  letter-spacing:.18em;
+}
+
+/* v27 Tallis Collection */
+@media(min-width:1201px){
+  #collections .collections{
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+}
+.tallis-grid .product img{
+  object-fit:cover;
+  object-position:center top;
+}
+
+/* Wool & Hide launch theme */
+:root{
+  --gold:#c9a46a;
+  --cream:#f2ece2;
+  --espresso:#120d09;
+}
+body{
+  background:
+    linear-gradient(rgba(11,8,6,.82),rgba(11,8,6,.82)),
+    url('assets/leather-bg-uniform.jpg') center/cover fixed;
+}
+.hero-kicker{
+  letter-spacing:.34em;
+  text-transform:uppercase;
+}
+#collections .collections{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:28px !important;
+}
+.collection-card{
+  border:1px solid rgba(201,164,106,.18);
+  background:rgba(16,11,8,.82);
+}
+.collection-body h3{
+  letter-spacing:.04em;
+}
+@media(max-width:900px){
+  #collections .collections{grid-template-columns:1fr !important;}
+}
