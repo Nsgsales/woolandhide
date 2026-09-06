@@ -467,3 +467,11 @@ body{
     grid-template-columns:repeat(2,minmax(0,1fr)) !important;
   }
 }
+
+/* v10 Shabbos Satchels + Tallis Bags */
+@media(min-width:1201px){
+  #collections .collections{grid-template-columns:repeat(3,minmax(0,1fr)) !important;}
+}
+@media(min-width:861px) and (max-width:1200px){
+  #collections .collections{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
