@@ -446,3 +446,12 @@ body{
     padding-top:32px !important;
   }
 }
+
+
+/* v7 add Lulav & Esrog collection card */
+@media(min-width:1201px){
+  #collections .collections{grid-template-columns:repeat(4,minmax(0,1fr)) !important;}
+}
+@media(min-width:861px) and (max-width:1200px){
+  #collections .collections{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
