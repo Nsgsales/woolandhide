@@ -475,3 +475,21 @@ body{
 @media(min-width:861px) and (max-width:1200px){
   #collections .collections{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
 }
+
+/* Tallis Bags material collection headings */
+.collection-group-heading{
+  text-align:center;
+  padding:52px 0 6px;
+  max-width:780px;
+  margin:0 auto;
+}
+.collection-group-heading h2{
+  font-size:38px;
+  margin:8px 0 10px;
+}
+.collection-group-heading p{
+  color:var(--muted);
+  line-height:1.7;
+  margin:0 auto;
+}
+.tallis-bag-subgrid{padding-top:28px}
