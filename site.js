@@ -8,6 +8,7 @@ document.addEventListener('click',(e)=>{
     const gallery=(card.dataset.gallery||card.dataset.image).split('|');
 
     main.src=gallery[0];
+    main.alt=card.dataset.title+' — '+(card.dataset.gallery?'Worn view':'Product view');
     modal.querySelector('.modal-title').textContent=card.dataset.title;
     modal.querySelector('.modal-desc').textContent=card.dataset.desc;
     modal.querySelector('.modal-material').textContent=card.dataset.material||'';
@@ -22,6 +23,7 @@ document.addEventListener('click',(e)=>{
         b.addEventListener('click',(ev)=>{
           ev.stopPropagation();
           main.src=src;
+          main.alt=card.dataset.title+' — '+(labels[i]||'View '+(i+1));
           thumbs.querySelectorAll('.modal-thumb').forEach(x=>x.classList.remove('active'));
           b.classList.add('active');
         });
@@ -45,3 +47,5 @@ document.addEventListener('keydown',e=>{
     document.body.style.overflow='';
   }
 });
+
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.product[role="button"]')){e.preventDefault();e.target.click();}});

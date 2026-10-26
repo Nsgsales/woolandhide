@@ -828,3 +828,5 @@ body.homepage footer{
     font-size:14px !important;
   }
 }
+
+.collection-note{max-width:780px;margin:0 0 28px;line-height:1.6;opacity:.75}.product[role="button"]:focus-visible{outline:3px solid #8e704a;outline-offset:5px}
